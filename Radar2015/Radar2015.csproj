@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F9285A99-8E8C-497A-97BB-31AEBF8AC76B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Radar2015</RootNamespace>
+    <AssemblyName>Radar2015</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="RADAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RADAR.Designer.cs">
+      <DependentUpon>RADAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="muctieu.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrucToaDo.cs" />
+    <EmbeddedResource Include="RADAR.resx">
+      <DependentUpon>RADAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Resources.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 catch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2 catch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2 over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3 catch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3 over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3d over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4 catch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4 over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5 catch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5 over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6 catch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6 over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\all over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baner1over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baner2over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revert over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speeddown over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speedup over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spiral over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stopover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZoneScan over.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
