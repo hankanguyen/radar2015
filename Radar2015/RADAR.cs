@@ -768,69 +768,24 @@ namespace Radar2015
                 }
                 mt_catched = 0;
                 a1.mt_catch = a2.mt_catch = a3.mt_catch = a4.mt_catch = a5.mt_catch = a6.mt_catch = 1;
-                resetbtMtColor(0);
+                resetbtMtColor();
             }
         }
         private void startBt_Click(object sender, EventArgs e)
         {
         }
         #endregion
-        public void resetbtMtColor(int i)
+        public void resetbtMtColor()
         {
-            switch (i)
-            {
-                case 1:
-                    this.bt2catch.Image = ((System.Drawing.Image)(resources.GetObject("2 catch")));
-                    this.bt3catch.Image = ((System.Drawing.Image)(resources.GetObject("3 catch")));
-                    this.bt4catch.Image = ((System.Drawing.Image)(resources.GetObject("4 catch")));
-                    this.bt5catch.Image = ((System.Drawing.Image)(resources.GetObject("5 catch")));
-                    this.bt6catch.Image = ((System.Drawing.Image)(resources.GetObject("6 catch")));
-                    break;
-                case 2:
-                    this.bt1catch.Image = ((System.Drawing.Image)(resources.GetObject("1 catch")));
-                    this.bt3catch.Image = ((System.Drawing.Image)(resources.GetObject("3 catch")));
-                    this.bt4catch.Image = ((System.Drawing.Image)(resources.GetObject("4 catch")));
-                    this.bt5catch.Image = ((System.Drawing.Image)(resources.GetObject("5 catch")));
-                    this.bt6catch.Image = ((System.Drawing.Image)(resources.GetObject("6 catch")));
-                    break;
-                case 3:
-                    this.bt2catch.Image = ((System.Drawing.Image)(resources.GetObject("2 catch")));
-                    this.bt1catch.Image = ((System.Drawing.Image)(resources.GetObject("1 catch")));
-                    this.bt4catch.Image = ((System.Drawing.Image)(resources.GetObject("4 catch")));
-                    this.bt5catch.Image = ((System.Drawing.Image)(resources.GetObject("5 catch")));
-                    this.bt6catch.Image = ((System.Drawing.Image)(resources.GetObject("6 catch")));
-                    break;
-                case 4:
-                    this.bt2catch.Image = ((System.Drawing.Image)(resources.GetObject("2 catch")));
-                    this.bt3catch.Image = ((System.Drawing.Image)(resources.GetObject("3 catch")));
-                    this.bt1catch.Image = ((System.Drawing.Image)(resources.GetObject("1 catch")));
-                    this.bt5catch.Image = ((System.Drawing.Image)(resources.GetObject("5 catch")));
-                    this.bt6catch.Image = ((System.Drawing.Image)(resources.GetObject("6 catch")));
-                    break;
-                case 5:
-                    this.bt2catch.Image = ((System.Drawing.Image)(resources.GetObject("2 catch")));
-                    this.bt3catch.Image = ((System.Drawing.Image)(resources.GetObject("3 catch")));
-                    this.bt4catch.Image = ((System.Drawing.Image)(resources.GetObject("4 catch")));
-                    this.bt1catch.Image = ((System.Drawing.Image)(resources.GetObject("1 catch")));
-                    this.bt6catch.Image = ((System.Drawing.Image)(resources.GetObject("6 catch")));
-                    break;
-                case 6:
-                    this.bt2catch.Image = ((System.Drawing.Image)(resources.GetObject("2 catch")));
-                    this.bt3catch.Image = ((System.Drawing.Image)(resources.GetObject("3 catch")));
-                    this.bt4catch.Image = ((System.Drawing.Image)(resources.GetObject("4 catch")));
-                    this.bt5catch.Image = ((System.Drawing.Image)(resources.GetObject("5 catch")));
-                    this.bt1catch.Image = ((System.Drawing.Image)(resources.GetObject("1 catch")));
-                    break;
-                case 0:
-                    this.bt1catch.Image = ((System.Drawing.Image)(resources.GetObject("bt1catch.Image")));
-                    this.bt2catch.Image = ((System.Drawing.Image)(resources.GetObject("bt2catch.Image")));
-                    this.bt3catch.Image = ((System.Drawing.Image)(resources.GetObject("bt3catch.Image")));
-                    this.bt4catch.Image = ((System.Drawing.Image)(resources.GetObject("bt4catch.Image")));
-                    this.bt5catch.Image = ((System.Drawing.Image)(resources.GetObject("bt5catch.Image")));
-                    this.bt6catch.Image = ((System.Drawing.Image)(resources.GetObject("bt6catch.Image")));
-                    break;
 
-            }
+            this.bt1catch.Image = global::Radar2015.Properties.Resources._1_catch;
+            this.bt2catch.Image = global::Radar2015.Properties.Resources._2_catch;
+            this.bt3catch.Image = global::Radar2015.Properties.Resources._3_catch;
+            this.bt4catch.Image = global::Radar2015.Properties.Resources._4_catch;
+            this.bt5catch.Image = global::Radar2015.Properties.Resources._5_catch;
+            this.bt6catch.Image = global::Radar2015.Properties.Resources._6_catch;
+
+
         }
         public void loadsplass()
         {
@@ -1364,15 +1319,18 @@ namespace Radar2015
 
         private void bt1catch_Click(object sender, EventArgs e)
         {
-            if ((a1.khoangcachmuctieu() <= 160) && (a1.mt_Started == 1) && (startOK == 1) && (scanAngle == 0))
-            {
-                chamlandau = 0;
+            //--------- Mục tiêu chưa xuất hiện, nhưng đã nằm trong list catch
+                resetbtMtColor();// Đưa tất cả các buton về màu mặc định
+            this.all.Image = global::Radar2015.Properties.Resources.all1;
+            this.bt1catch.Image = global::Radar2015.Properties.Resources._1_over;// đổi màu buton
                 mt_catched = 1;
-                resetbtMtColor(mt_catched);
                 a1.mt_catch = 1;
+
+            if ((a1.khoangcachmuctieu() <= 160)&&(a1.mt_Started == 1) && (startOK == 1) && (scanAngle == 0))
+            {
+                chamlandau = 0;                
                 a2.mt_catch = a3.mt_catch = a4.mt_catch = a5.mt_catch = a6.mt_catch = 0;
                 refreshmh2();
-                this.bt1catch.Image = ((System.Drawing.Image)(resources.GetObject("bt1catch.Image")));
             }
             else
             {
@@ -1383,29 +1341,27 @@ namespace Radar2015
 
         private void bt1over(object sender, EventArgs e)
         {
-            this.bt1catch.Image = ((Image)(resources.GetObject("1 over")));
+           
             st.Text = " Nhấp vào đây sẽ chỉ có mình mục tiêu thứ nhất được theo dõi";
         }
 
         private void bt1leave(object sender, EventArgs e)
         {
-            if (a1.mt_catch == 1)
-                this.bt1catch.Image = ((System.Drawing.Image)(resources.GetObject("bt1catch.Image")));
-            else
-                this.bt1catch.Image = ((System.Drawing.Image)(resources.GetObject("1 catch")));
             st.Text = "Radar đang hoạt động ";
         }
 
         private void bt2catch_Click(object sender, EventArgs e)
         {
-            if ((a2.khoangcachmuctieu() <= 160) && (a2.mt_Started == 1) && (startOK == 1) && (scanAngle == 0))
-            {
-                chamlandau = 0;
+           
+                resetbtMtColor();
+            this.all.Image = global::Radar2015.Properties.Resources.all1;
+            this.bt2catch.Image = global::Radar2015.Properties.Resources._2_over;
                 mt_catched = 2;
-                resetbtMtColor(mt_catched);
+                a2.mt_catch = 1;  
+            if ((a2.khoangcachmuctieu() <= 160)&&(a2.mt_Started == 1) && (startOK == 1) && (scanAngle == 0))
+            {
+                chamlandau = 0;                
                 a1.mt_catch = a6.mt_catch = a3.mt_catch = a4.mt_catch = a5.mt_catch = 0;
-                a2.mt_catch = 1;
-                this.bt2catch.Image = ((System.Drawing.Image)(resources.GetObject("bt2catch.Image")));
                 refreshmh2();
             }
             else
@@ -1418,30 +1374,29 @@ namespace Radar2015
 
         private void bt2over(object sender, EventArgs e)
         {
-            this.bt2catch.Image = ((System.Drawing.Image)(resources.GetObject("2 over")));
+            
             st.Text = "Nhấp vào đây , sẽ chỉ có mình mục tiêu thứ 2 được theo dõi";
         }
 
         private void bt2leave(object sender, EventArgs e)
         {
-            if (a2.mt_catch == 1)
-                this.bt2catch.Image = ((System.Drawing.Image)(resources.GetObject("bt2catch.Image")));
-            else
-                this.bt2catch.Image = ((System.Drawing.Image)(resources.GetObject("2 catch")));
+           
             st.Text = " Radar đang hoạt động ";
         }
 
         private void bt3_Click(object sender, EventArgs e)
         {
-            if ((a3.khoangcachmuctieu() <= 160) && (a3.mt_Started == 1) && (startOK == 1) && (scanAngle == 0))
-            {
-                chamlandau = 0;
                 mt_catched = 3;
-                resetbtMtColor(mt_catched);
                 a3.mt_catch = 1;
-                a1.mt_catch = a2.mt_catch = a6.mt_catch = a4.mt_catch = a5.mt_catch = 0;
-                this.bt3catch.Image = ((System.Drawing.Image)(resources.GetObject("bt3catch.Image")));
-                refreshmh2();
+                resetbtMtColor();
+            this.all.Image = global::Radar2015.Properties.Resources.all1;
+            this.bt3catch.Image = global::Radar2015.Properties.Resources._3_over;
+           
+            if ((a3.khoangcachmuctieu() <= 160)&&(a3.mt_Started == 1) && (startOK == 1) && (scanAngle == 0))
+            {
+                chamlandau = 0;                
+                a1.mt_catch = a2.mt_catch = a6.mt_catch = a4.mt_catch = a5.mt_catch = 0; this.bt3catch.Image = global::Radar2015.Properties.Resources._3_catch;
+               refreshmh2();
             }
             else
             {
@@ -1452,29 +1407,26 @@ namespace Radar2015
 
         private void bt3over(object sender, EventArgs e)
         {
-            this.bt3catch.Image = ((System.Drawing.Image)(resources.GetObject("3 over")));
             st.Text = "Nhấp vào đây , sẽ chỉ có mình mục tiêu thứ 3 được theo dõi";
         }
 
         private void bt3leave(object sender, EventArgs e)
         {
-            if (a3.mt_catch == 1)
-                this.bt3catch.Image = ((System.Drawing.Image)(resources.GetObject("bt3catch.Image")));
-            else
-                this.bt3catch.Image = ((System.Drawing.Image)(resources.GetObject("3 catch")));
             st.Text = "Radar đang hoạt động";
         }
 
         private void bt4catch_Click(object sender, EventArgs e)
         {
-            if ((a4.khoangcachmuctieu() <= 160) && (a4.mt_Started == 1) && (startOK == 1) && (scanAngle == 0))
-            {
-                chamlandau = 0;
                 mt_catched = 4;
-                resetbtMtColor(mt_catched);
                 a4.mt_catch = 1;
-                a1.mt_catch = a2.mt_catch = a3.mt_catch = a5.mt_catch = a6.mt_catch = 0;
-                this.bt4catch.Image = ((System.Drawing.Image)(resources.GetObject("bt4catch.Image")));
+                resetbtMtColor();
+            this.all.Image = global::Radar2015.Properties.Resources.all1;
+            this.bt4catch.Image = global::Radar2015.Properties.Resources._4_over;
+            
+            if ((a4.khoangcachmuctieu() <= 160)&&(a4.mt_Started == 1) && (startOK == 1) && (scanAngle == 0))
+            {
+                chamlandau = 0;                
+                a1.mt_catch = a2.mt_catch = a3.mt_catch = a5.mt_catch = a6.mt_catch = 0; this.bt3catch.Image = global::Radar2015.Properties.Resources._3_catch;
                 refreshmh2();
             }
             else
@@ -1486,29 +1438,28 @@ namespace Radar2015
 
         private void bt4over(object sender, EventArgs e)
         {
-            this.bt4catch.Image = ((System.Drawing.Image)(resources.GetObject("4 over")));
+            
             st.Text = "Nhấp vào đây,sẽ chỉ có mình mục tieu thứ 4 được theo dõi";
         }
 
         private void bt4leave(object sender, EventArgs e)
         {
-            if (a4.mt_catch == 1)
-                this.bt4catch.Image = ((System.Drawing.Image)(resources.GetObject("bt4catch.Image")));
-            else
-                this.bt4catch.Image = ((System.Drawing.Image)(resources.GetObject("4 catch")));
+            
             st.Text = "Radar đang hoạt động";
         }
 
         private void bt5catch_Click(object sender, EventArgs e)
         {
-            if ((a5.khoangcachmuctieu() <= 160) && (a5.mt_Started == 1) && (startOK == 1) && (scanAngle == 0))
-            {
-                chamlandau = 0;
                 mt_catched = 5;
-                resetbtMtColor(mt_catched);
                 a5.mt_catch = 1;
-                a1.mt_catch = a2.mt_catch = a3.mt_catch = a4.mt_catch = a6.mt_catch = 0;
-                this.bt5catch.Image = ((System.Drawing.Image)(resources.GetObject("bt5catch.Image")));
+                resetbtMtColor();
+            this.all.Image = global::Radar2015.Properties.Resources.all1;
+            this.bt5catch.Image = global::Radar2015.Properties.Resources._5_over;
+            
+            if ((a5.khoangcachmuctieu() <= 160)&&(a5.mt_Started == 1) && (startOK == 1) && (scanAngle == 0))
+            {
+                chamlandau = 0;               
+                a1.mt_catch = a2.mt_catch = a3.mt_catch = a4.mt_catch = a6.mt_catch = 0;               
                 refreshmh2();
             }
             else
@@ -1520,29 +1471,27 @@ namespace Radar2015
 
         private void bt5over(object sender, EventArgs e)
         {
-            this.bt5catch.Image = ((System.Drawing.Image)(resources.GetObject("5 over")));
+           
             st.Text = " Nhấp vào đây ,sẽ chỉ có mình mục tiêu thứ 5 được theo dõi ";
         }
 
         private void bt5leave(object sender, EventArgs e)
         {
-            if (a5.mt_catch == 1)
-                this.bt5catch.Image = ((System.Drawing.Image)(resources.GetObject("bt5catch.Image")));
-            else
-                this.bt5catch.Image = ((System.Drawing.Image)(resources.GetObject("5 catch")));
             st.Text = "Radar đang hoạt đông";
         }
 
         private void bt6catch_Click(object sender, EventArgs e)
         {
-            if ((a6.khoangcachmuctieu() <= 160) && (a6.mt_Started == 1) && (startOK == 1))
-            {
-                chamlandau = 0;
                 mt_catched = 6;
-                resetbtMtColor(mt_catched);
                 a6.mt_catch = 1;
+                resetbtMtColor();
+            this.all.Image = global::Radar2015.Properties.Resources.all1;
+            this.bt6catch.Image = global::Radar2015.Properties.Resources._6_over;
+            
+            if ((a6.khoangcachmuctieu() <= 160)&&(a6.mt_Started == 1) && (startOK == 1))
+            {
+                chamlandau = 0;                
                 a2.mt_catch = a3.mt_catch = a4.mt_catch = a5.mt_catch = a1.mt_catch = 0;
-                this.bt6catch.Image = ((System.Drawing.Image)(resources.GetObject("bt6catch.Image")));
                 refreshmh2();
             }
             else
@@ -1554,21 +1503,18 @@ namespace Radar2015
 
         private void bt6over(object sender, EventArgs e)
         {
-            this.bt6catch.Image = ((System.Drawing.Image)(resources.GetObject("6 over")));
+           
             st.Text = " Nhấp vào đây ,sẽ chỉ có mình mục tiêu thứ 6 được theo dõi";
         }
 
         private void bt6leave(object sender, EventArgs e)
         {
-            if (a6.mt_catch == 1)
-                this.bt6catch.Image = ((System.Drawing.Image)(resources.GetObject("bt6catch.Image")));
-            else
-                this.bt6catch.Image = ((System.Drawing.Image)(resources.GetObject("6 catch")));
-            st.Text = "Radar đang hoạt động";
+            st.Text = "Radar đang hoạt đông";
         }
 
         private void all_Click(object sender, EventArgs e)
         {
+            this.all.Image = global::Radar2015.Properties.Resources.all_over;
             if (startOK == 1)
             {
                 switch (mt_catched)
@@ -1582,19 +1528,20 @@ namespace Radar2015
                 }
                 mt_catched = 0;
                 a1.mt_catch = a2.mt_catch = a3.mt_catch = a4.mt_catch = a5.mt_catch = a6.mt_catch = 1;
-                resetbtMtColor(0);
+                resetbtMtColor();
             }
         }
 
         private void allover(object sender, EventArgs e)
         {
-            this.all.Image = ((System.Drawing.Image)(resources.GetObject("all over")));
+          
+            
             st.Text = "Tất cả các mục tiêu sẽ được theo dõi ";
         }
 
         private void leave(object sender, EventArgs e)
         {
-            this.all.Image = ((System.Drawing.Image)(resources.GetObject("all.Image")));
+           
             st.Text = " Radar đang hoạt động ";
         }
 

@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RADAR));
-            this.btstart = new System.Windows.Forms.PictureBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.vRadar = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btexit = new System.Windows.Forms.PictureBox();
             this.bthelp = new System.Windows.Forms.PictureBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btstart = new System.Windows.Forms.PictureBox();
             this.btRv = new System.Windows.Forms.PictureBox();
             this.spdown = new System.Windows.Forms.PictureBox();
             this.btreset = new System.Windows.Forms.PictureBox();
@@ -43,27 +43,26 @@
             this.btdefault = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.g2 = new System.Windows.Forms.TextBox();
-            this.bt3catch = new System.Windows.Forms.PictureBox();
-            this.zoneScan = new System.Windows.Forms.PictureBox();
             this.deg_180 = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.g1 = new System.Windows.Forms.TextBox();
             this.st = new System.Windows.Forms.Label();
-            this.bt2catch = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.space = new System.Windows.Forms.PictureBox();
             this.btLine = new System.Windows.Forms.PictureBox();
             this.btcircle = new System.Windows.Forms.PictureBox();
             this.btspiral = new System.Windows.Forms.PictureBox();
-            this.bt1catch = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.all = new System.Windows.Forms.PictureBox();
             this.bt5catch = new System.Windows.Forms.PictureBox();
             this.bt4catch = new System.Windows.Forms.PictureBox();
             this.bt6catch = new System.Windows.Forms.PictureBox();
+            this.bt1catch = new System.Windows.Forms.PictureBox();
+            this.bt3catch = new System.Windows.Forms.PictureBox();
+            this.bt2catch = new System.Windows.Forms.PictureBox();
+            this.zoneScan = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Ld5 = new System.Windows.Forms.Label();
             this.Ld4 = new System.Windows.Forms.Label();
             this.Ld3 = new System.Windows.Forms.Label();
@@ -95,44 +94,35 @@
             this.label7 = new System.Windows.Forms.Label();
             this.Lv6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.btstart)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btexit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bthelp)).BeginInit();
-            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btstart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btRv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spdown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btreset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btdefault)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bt3catch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zoneScan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bt2catch)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.space)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btcircle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btspiral)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bt1catch)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.all)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt5catch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt4catch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt6catch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bt1catch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bt3catch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bt2catch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zoneScan)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btstart
-            // 
-            this.btstart.Image = ((System.Drawing.Image)(resources.GetObject("btstart.Image")));
-            this.btstart.Location = new System.Drawing.Point(42, 92);
-            this.btstart.Name = "btstart";
-            this.btstart.Size = new System.Drawing.Size(75, 27);
-            this.btstart.TabIndex = 1;
-            this.btstart.TabStop = false;
-            this.btstart.Click += new System.EventHandler(this.btstart_Click);
             // 
             // groupBox6
             // 
@@ -150,25 +140,6 @@
             this.vRadar.Name = "vRadar";
             this.vRadar.Size = new System.Drawing.Size(0, 13);
             this.vRadar.TabIndex = 4;
-            // 
-            // btexit
-            // 
-            this.btexit.Image = ((System.Drawing.Image)(resources.GetObject("btexit.Image")));
-            this.btexit.Location = new System.Drawing.Point(81, 118);
-            this.btexit.Name = "btexit";
-            this.btexit.Size = new System.Drawing.Size(76, 28);
-            this.btexit.TabIndex = 12;
-            this.btexit.TabStop = false;
-            this.btexit.Click += new System.EventHandler(this.btexit_Click);
-            // 
-            // bthelp
-            // 
-            this.bthelp.Image = ((System.Drawing.Image)(resources.GetObject("bthelp.Image")));
-            this.bthelp.Location = new System.Drawing.Point(3, 119);
-            this.bthelp.Name = "bthelp";
-            this.bthelp.Size = new System.Drawing.Size(75, 27);
-            this.bthelp.TabIndex = 7;
-            this.bthelp.TabStop = false;
             // 
             // groupBox5
             // 
@@ -189,6 +160,35 @@
             this.groupBox5.TabIndex = 13;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Zone Control";
+            // 
+            // btexit
+            // 
+            this.btexit.Image = ((System.Drawing.Image)(resources.GetObject("btexit.Image")));
+            this.btexit.Location = new System.Drawing.Point(81, 118);
+            this.btexit.Name = "btexit";
+            this.btexit.Size = new System.Drawing.Size(76, 28);
+            this.btexit.TabIndex = 12;
+            this.btexit.TabStop = false;
+            this.btexit.Click += new System.EventHandler(this.btexit_Click);
+            // 
+            // bthelp
+            // 
+            this.bthelp.Image = ((System.Drawing.Image)(resources.GetObject("bthelp.Image")));
+            this.bthelp.Location = new System.Drawing.Point(3, 119);
+            this.bthelp.Name = "bthelp";
+            this.bthelp.Size = new System.Drawing.Size(75, 27);
+            this.bthelp.TabIndex = 7;
+            this.bthelp.TabStop = false;
+            // 
+            // btstart
+            // 
+            this.btstart.Image = ((System.Drawing.Image)(resources.GetObject("btstart.Image")));
+            this.btstart.Location = new System.Drawing.Point(42, 92);
+            this.btstart.Name = "btstart";
+            this.btstart.Size = new System.Drawing.Size(75, 27);
+            this.btstart.TabIndex = 1;
+            this.btstart.TabStop = false;
+            this.btstart.Click += new System.EventHandler(this.btstart_Click);
             // 
             // btRv
             // 
@@ -261,27 +261,6 @@
             this.g2.Size = new System.Drawing.Size(34, 21);
             this.g2.TabIndex = 8;
             // 
-            // bt3catch
-            // 
-            this.bt3catch.Image = ((System.Drawing.Image)(resources.GetObject("bt3catch.Image")));
-            this.bt3catch.Location = new System.Drawing.Point(99, 45);
-            this.bt3catch.Name = "bt3catch";
-            this.bt3catch.Size = new System.Drawing.Size(27, 23);
-            this.bt3catch.TabIndex = 12;
-            this.bt3catch.TabStop = false;
-            this.bt3catch.Click += new System.EventHandler(this.bt3_Click);
-            // 
-            // zoneScan
-            // 
-            this.zoneScan.BackColor = System.Drawing.Color.Transparent;
-            this.zoneScan.Image = ((System.Drawing.Image)(resources.GetObject("zoneScan.Image")));
-            this.zoneScan.Location = new System.Drawing.Point(8, 95);
-            this.zoneScan.Name = "zoneScan";
-            this.zoneScan.Size = new System.Drawing.Size(67, 42);
-            this.zoneScan.TabIndex = 8;
-            this.zoneScan.TabStop = false;
-            this.zoneScan.Click += new System.EventHandler(this.zoneScan_Click);
-            // 
             // deg_180
             // 
             this.deg_180.AutoSize = true;
@@ -322,16 +301,6 @@
             this.st.Size = new System.Drawing.Size(132, 13);
             this.st.TabIndex = 2;
             this.st.Text = "Radar đang hoạt động";
-            // 
-            // bt2catch
-            // 
-            this.bt2catch.Image = ((System.Drawing.Image)(resources.GetObject("bt2catch.Image")));
-            this.bt2catch.Location = new System.Drawing.Point(131, 19);
-            this.bt2catch.Name = "bt2catch";
-            this.bt2catch.Size = new System.Drawing.Size(27, 23);
-            this.bt2catch.TabIndex = 11;
-            this.bt2catch.TabStop = false;
-            this.bt2catch.Click += new System.EventHandler(this.bt2catch_Click);
             // 
             // groupBox2
             // 
@@ -388,18 +357,6 @@
             this.btspiral.TabStop = false;
             this.btspiral.Click += new System.EventHandler(this.btspiral_Click);
             // 
-            // bt1catch
-            // 
-            this.bt1catch.Image = ((System.Drawing.Image)(resources.GetObject("bt1catch.Image")));
-            this.bt1catch.Location = new System.Drawing.Point(99, 19);
-            this.bt1catch.Name = "bt1catch";
-            this.bt1catch.Size = new System.Drawing.Size(27, 23);
-            this.bt1catch.TabIndex = 9;
-            this.bt1catch.TabStop = false;
-            this.bt1catch.Click += new System.EventHandler(this.bt1catch_Click);
-            this.bt1catch.MouseLeave += new System.EventHandler(this.bt1leave);
-            this.bt1catch.MouseHover += new System.EventHandler(this.bt1over);
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
@@ -438,57 +395,100 @@
             // 
             // all
             // 
-            this.all.Image = ((System.Drawing.Image)(resources.GetObject("all.Image")));
+            this.all.Image = global::Radar2015.Properties.Resources.all_over;
             this.all.Location = new System.Drawing.Point(94, 102);
             this.all.Name = "all";
             this.all.Size = new System.Drawing.Size(69, 27);
             this.all.TabIndex = 14;
             this.all.TabStop = false;
             this.all.Click += new System.EventHandler(this.all_Click);
+            this.all.MouseLeave += new System.EventHandler(this.leave);
+            this.all.MouseHover += new System.EventHandler(this.allover);
             // 
             // bt5catch
             // 
-            this.bt5catch.Image = ((System.Drawing.Image)(resources.GetObject("bt5catch.Image")));
+            this.bt5catch.Image = global::Radar2015.Properties.Resources._5_catch;
             this.bt5catch.Location = new System.Drawing.Point(99, 72);
             this.bt5catch.Name = "bt5catch";
             this.bt5catch.Size = new System.Drawing.Size(27, 23);
             this.bt5catch.TabIndex = 13;
             this.bt5catch.TabStop = false;
             this.bt5catch.Click += new System.EventHandler(this.bt5catch_Click);
+            this.bt5catch.MouseLeave += new System.EventHandler(this.bt5leave);
+            this.bt5catch.MouseHover += new System.EventHandler(this.bt5over);
             // 
             // bt4catch
             // 
-            this.bt4catch.Image = ((System.Drawing.Image)(resources.GetObject("bt4catch.Image")));
+            this.bt4catch.Image = global::Radar2015.Properties.Resources._4_catch;
             this.bt4catch.Location = new System.Drawing.Point(131, 45);
             this.bt4catch.Name = "bt4catch";
             this.bt4catch.Size = new System.Drawing.Size(27, 23);
             this.bt4catch.TabIndex = 10;
             this.bt4catch.TabStop = false;
             this.bt4catch.Click += new System.EventHandler(this.bt4catch_Click);
+            this.bt4catch.MouseLeave += new System.EventHandler(this.bt4leave);
+            this.bt4catch.MouseHover += new System.EventHandler(this.bt4over);
             // 
             // bt6catch
             // 
-            this.bt6catch.Image = ((System.Drawing.Image)(resources.GetObject("bt6catch.Image")));
+            this.bt6catch.Image = global::Radar2015.Properties.Resources._6_catch;
             this.bt6catch.Location = new System.Drawing.Point(131, 72);
             this.bt6catch.Name = "bt6catch";
             this.bt6catch.Size = new System.Drawing.Size(27, 23);
             this.bt6catch.TabIndex = 16;
             this.bt6catch.TabStop = false;
             this.bt6catch.Click += new System.EventHandler(this.bt6catch_Click);
+            this.bt6catch.MouseLeave += new System.EventHandler(this.bt6leave);
+            this.bt6catch.MouseHover += new System.EventHandler(this.bt6over);
+            // 
+            // bt1catch
+            // 
+            this.bt1catch.Image = global::Radar2015.Properties.Resources._1_catch;
+            this.bt1catch.Location = new System.Drawing.Point(99, 19);
+            this.bt1catch.Name = "bt1catch";
+            this.bt1catch.Size = new System.Drawing.Size(27, 23);
+            this.bt1catch.TabIndex = 9;
+            this.bt1catch.TabStop = false;
+            this.bt1catch.Click += new System.EventHandler(this.bt1catch_Click);
+            // 
+            // bt3catch
+            // 
+            this.bt3catch.Image = global::Radar2015.Properties.Resources._3_catch;
+            this.bt3catch.Location = new System.Drawing.Point(99, 45);
+            this.bt3catch.Name = "bt3catch";
+            this.bt3catch.Size = new System.Drawing.Size(27, 23);
+            this.bt3catch.TabIndex = 12;
+            this.bt3catch.TabStop = false;
+            this.bt3catch.Click += new System.EventHandler(this.bt3_Click);
+            this.bt3catch.MouseLeave += new System.EventHandler(this.bt3leave);
+            this.bt3catch.MouseHover += new System.EventHandler(this.bt3over);
+            // 
+            // bt2catch
+            // 
+            this.bt2catch.Image = global::Radar2015.Properties.Resources._2_catch;
+            this.bt2catch.Location = new System.Drawing.Point(131, 19);
+            this.bt2catch.Name = "bt2catch";
+            this.bt2catch.Size = new System.Drawing.Size(27, 23);
+            this.bt2catch.TabIndex = 11;
+            this.bt2catch.TabStop = false;
+            this.bt2catch.Click += new System.EventHandler(this.bt2catch_Click);
+            this.bt2catch.MouseLeave += new System.EventHandler(this.bt2leave);
+            this.bt2catch.MouseHover += new System.EventHandler(this.bt2over);
+            // 
+            // zoneScan
+            // 
+            this.zoneScan.BackColor = System.Drawing.Color.Transparent;
+            this.zoneScan.Image = ((System.Drawing.Image)(resources.GetObject("zoneScan.Image")));
+            this.zoneScan.Location = new System.Drawing.Point(8, 95);
+            this.zoneScan.Name = "zoneScan";
+            this.zoneScan.Size = new System.Drawing.Size(67, 42);
+            this.zoneScan.TabIndex = 8;
+            this.zoneScan.TabStop = false;
+            this.zoneScan.Click += new System.EventHandler(this.zoneScan_Click);
             // 
             // timer1
             // 
             this.timer1.Interval = 14;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(304, 153);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
             // 
             // Ld5
             // 
@@ -814,6 +814,16 @@
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(304, 153);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
             // RADAR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -830,26 +840,22 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Radar 2015";
             this.Load += new System.EventHandler(this.RADAR_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.btstart)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btexit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bthelp)).EndInit();
-            this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btstart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btRv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spdown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btreset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btdefault)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bt3catch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zoneScan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bt2catch)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.space)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btcircle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btspiral)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bt1catch)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -858,9 +864,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.bt5catch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt4catch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt6catch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bt1catch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bt3catch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bt2catch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zoneScan)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
